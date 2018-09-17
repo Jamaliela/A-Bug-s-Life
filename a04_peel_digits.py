@@ -52,6 +52,7 @@ def peel_digits_test_suite():
 
     # TODO ADD MORE UNIT TESTS HERE!
 
+
     print("Run of peel_digits_test_suite() complete.")
 
 
@@ -71,11 +72,11 @@ def peel_digits(num):
     return digit_list
 
 
-def print_digits(digit_list): # takes a Python list as input
+def print_digits(digit_list):
     """
-    Given any Python list, this function prints each list element
+    Given any list, this function prints each list element
 
-    :param digit_list: a list
+    :param digit_list: a list of digits to print
     :return: None
     """
     for digit in digit_list:
@@ -89,6 +90,7 @@ def random_peeler():
 
     :return: None
     """
+
     year = random.randint(1000, 2018)
     print("\nYear = " + str(year))
     year_list = peel_digits(year)  # Put list returned from function into year_list

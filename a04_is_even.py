@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
+# Username: heggens & lovelle             TODO: Change this to your usernames
 #
 # Assignment: A04: A Bug's Life
 #
@@ -16,6 +16,7 @@
 ####################################################################################
 
 import sys
+
 
 def testit(did_pass):
     """

@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
+# Username: heggens & lovelle             TODO: Change this to your usernames
 #
 # Assignment: A04: A Bug's Life
 #
@@ -49,15 +49,14 @@ def pennies_test_suite():
 
     :return: None
     """
+
     print("\nRunning pennies_test_suite()).")
+
     # Remember that I_steal_pennies() returns a list in the form [num_quarters, num_dimes, num_nickels, num_pennies]
     testit(i_steal_pennies(0.88) == [3, 1, 0, 3]) # because 0.88 = 3*0.25 + 1*0.10 + 0*0.05 + 3*0.01
     testit(i_steal_pennies(0.89) == [3, 1, 0, 4]) # because 0.89 = 3*0.25 + 1*0.10 + 0*0.05 + 4*0.01
 
-
-
     # TODO ADD MORE UNIT TESTS HERE!
-
 
 
     print("Run of pennies_test_suite() complete.")
@@ -117,9 +116,9 @@ def print_change(coinlist):
 
     print("Can you tell if I am an honest machine? ")
     print("Give out the following change: ")
-    valuelist = ["Quarter(s): ", "Dime(s): ", "Nickel(s): ", "Penny(s): "]
+    value_list = ["Quarter(s): ", "Dime(s): ", "Nickel(s): ", "Penny(s): "]
     for item in range(4):
-        print(valuelist[item] + str(coinlist[item]))
+        print(value_list[item] + str(coinlist[item]))
 
 
 def user_input_of_coins():
