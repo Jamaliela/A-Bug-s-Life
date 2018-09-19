@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
+# Username: heggens & lovelle             TODO: Change this to your usernames
 #
 # Purpose: This program is designed to demonstrate the use of Python's string capabilities
 # as a method for peeling digits from an integer
