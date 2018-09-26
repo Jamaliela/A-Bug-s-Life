@@ -12,9 +12,11 @@
 ######################################################################
 import turtle
 
+
 def day_of_birth():
     """
     this function first checks if the input is a master number (11,22,33) and returns it. if not a master number, it adds the integers of the day of birth and returns them.
+    :param: None
     :return: sum of integers of the day of birth or master number (11, 22 or 33)
     """
     day = (int(input("What is the day of your birthday?")))    # asks the user to input their day of birth
@@ -29,6 +31,7 @@ def day_of_birth():
 def month_of_birth():
     """
     this function first checks if the input is a master number (11,22,33) and returns it. if not a master number, it adds the integers of the month of birth and returns them.
+    :param: None
     :return: sum of integers of the month of birth or master number (11, 22 or 33)
     """
     month = (int(input("What is the month of your birthday?")))   # asks the user to input their month of birth
@@ -42,7 +45,8 @@ def month_of_birth():
 
 def year_of_birth():
     """
-    this function first checks if the input is a master number (11,22,33) and returns it. if not a master number, it adds the integers of the year of birth and returns them.
+    this function gets the year if the sum of the digits of the year is a master number (11,22,33) it keeps it and returns it. if not a master number, it adds the integers of the year of birth and returns them.
+    :param: None
     :return: sum of integers of the year of birth or master number (11, 22 or 33)
     """
     year = (int(input("What is the year of your birthday?")))     # asks the user to input their year of birth
@@ -65,6 +69,7 @@ def year_of_birth():
 def life_path_number():
     """
     function that first calls all the functions and then adds all their values found to get the final life path number
+    :param: None
     :return: sum of the three values found
     """
     day1 = day_of_birth()                                        # assigning the day_of_birth function to a variable to get its value
@@ -79,29 +84,30 @@ def life_path_number():
 
 def final(tortuga):
     """
-
-    :return:
+    This function will display the life path number using turtle
+    :param: tortuga = a turtle object
+    :return: None
     """
-    numero = life_path_number()
-    # numero == 6:
-    tortuga.write("Congratulations. Your life path number is " + str(numero), move=False, align="left", font=("Arial", 10, "normal"))
-    # else:
-    #     print("too bad")
+    numero = life_path_number()   # we adding a value to the variable numero which will call the life_path_number
+    tortuga.write("Congratulations. Your life path number is " + str(numero), move=False, align="center", font=("Arial", 23, "italic"))
+    # the turtle will write the statement based on the life path number in a specific font and position
 
 
 def main():
     """
     main function where other functions are executed to find the life path number
-    :return: life path number
+    :param: None
+    :return: None
     """
+    tortuga = turtle.Turtle()                  # creating a turtle object
+    tortuga.shape("blank")                     # hiding the turtle object in the middle of the screen.
+    tortuga.pencolor("black")                  # changing the pen color to black so the turtle writes in that color
 
-
-    # (life_path_number())                                      # printing the final function where all other functions are ran and final value is found.
-    tortuga = turtle.Turtle()
-    wn = turtle.Screen()
-    final(tortuga)
-
-    wn.exitonclick()
+    wn = turtle.Screen()                       # setting up the background for our turtle object
+    wn.bgpic("backg.gif")                      # inserting an image in the background
+    wn.bgcolor("purple")                       # setting the color of the background
+    final(tortuga)                             # calling our final function that runs the other functions to compute life path number
+    wn.exitonclick()                           # indicates that the screen will exit when we click it
 
 
 main()
